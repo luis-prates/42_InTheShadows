@@ -1,0 +1,51 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'bevy_3d_person'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=bevy_3d_person",
+					"--package=bevy_3d_person"
+				],
+				"filter": {
+					"name": "bevy_3d_person",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}",
+			"env": {
+				"CARGO_MANIFEST_DIR": "${workspaceFolder}",
+			}
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'bevy_3d_person'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=bevy_3d_person",
+					"--package=bevy_3d_person"
+				],
+				"filter": {
+					"name": "bevy_3d_person",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}",
+			"env": {
+				"CARGO_MANIFEST_DIR": "${workspaceFolder}",
+			}
+		}
+	]
+}
